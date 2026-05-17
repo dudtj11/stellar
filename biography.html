@@ -1,11 +1,41 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Youngseo Kim</title>
+		<title>Youngseo Kim - Biography</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* 언어 스위치 버튼 스타일 */
+			.lang-switch {
+				margin-bottom: 2.5em;
+				text-align: center;
+			}
+			.lang-btn {
+				background-color: transparent !important;
+				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15) !important;
+				color: #ffffff !important;
+				margin: 0 0.3em 0.5em 0.3em;
+				padding: 0 1.5em;
+				height: 2.5em;
+				line-height: 2.5em;
+				font-size: 0.85em;
+				letter-spacing: 0.1em;
+			}
+			.lang-btn.active {
+				background-color: #ffffff !important;
+				color: #636363 !important;
+				font-weight: bold;
+			}
+			/* 기본적으로 영어만 보이고 나머지는 숨김 */
+			.lang-content {
+				display: none;
+			}
+			.lang-content.active {
+				display: block;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -22,7 +52,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="biography.html">Biography</a></li>
+							<li><a href="biography.html" class="active">Biography</a></li>
 							<li><a href="calendar.html">Calendar</a></li>
 							<li><a href="project.html">Project</a></li>
 							<li><a href="watch.html">Watch</a></li>
@@ -37,9 +67,41 @@
 						<!-- Post -->
 							<section class="main">
 								<header class="major">
-									<h2>Biography (예: Calendar)</h2>
+									<h2>Biography</h2>
 								</header>
-								<p>여기에 세부 내용을 한글로 자유롭게 채워 넣으면 된다.</p>
+
+								<!-- 언어 선택 버튼 구역 (영-독-프-한 순서) -->
+								<div class="lang-switch">
+									<button class="button lang-btn active" onclick="changeLang('en')">EN</button>
+									<button class="button lang-btn" onclick="changeLang('de')">DE</button>
+									<button class="button lang-btn" onclick="changeLang('fr')">FR</button>
+									<button class="button lang-btn" onclick="changeLang('ko')">KR</button>
+								</div>
+
+								<!-- 1. 영어 본문 (기본 활성화) -->
+								<div id="lang-en" class="lang-content active">
+									<p>Youngseo Kim is a violinist and artistic researcher whose work interrogates the intersection of musical performance, epistemology, and socio-critical structures. They are currently pursuing an Artistic Research PhD at the University of Music and Performing Arts Vienna (mdw), with doctoral research focusing on the non-verbal social criticism embedded within the re-contextualization of Fluxus performance protocols.</p>
+									<p>Kim’s artistic praxis spans both contemporary music (Neue Musik) and historical performance practice. They have performed extensively on major international stages, including the Salzburg Festival, collaborating with leading avant-garde ensembles such as Klangforum Wien. Currently based in Paris, Kim actively bridges rigorous academic inquiry with critical stage practice.</p>
+								</div>
+
+								<!-- 2. 독일어 본문 -->
+								<div id="lang-de" class="lang-content">
+									<p>Youngseo Kim ist Geiger und künstlerischer Forscher, dessen Arbeit die Schnittstellen zwischen musikalischer Aufführungspraxis, Erkenntnistheorie und gesellschaftskritischen Strukturen untersucht. Er absolviert derzeit ein PhD-Studium im Bereich Artistic Research an der Universität für Musik und darstellende Kunst Wien (mdw). Im Zentrum seines Promotionsprojekts steht die nonverbale Gesellschaftskritik durch die Rekontextualisierung von Fluxus-Performance-Strukturen.</p>
+									<p>Kims künstlerische Praxis verbindet die Neue Musik mit der historischen Aufführungspraxis. Er trat auf renommierten internationalen Bühnen wie den Salzburger Festspielen auf und arbeitete mit führenden Ensembles wie dem Klangforum Wien zusammen. Derzeit lebt und arbeitet Kim in Paris, um wissenschaftliche Reflexion und kritische Konzertpraxis organisch zu verknüpfen.</p>
+								</div>
+
+								<!-- 3. 프랑스어 본문 -->
+								<div id="lang-fr" class="lang-content">
+									<p>Youngseo Kim est violoniste et chercheur en art (Artistic Research), dont les travaux explorent l'intersection entre la performance musicale, l'épistémologie et les structures de la critique sociale. Il poursuit actuellement un doctorat en recherche artistique à l'Université de musique et des arts du spectacle de Vienne (mdw). Sa recherche doctorale porte sur la critique sociale non-verbale à travers la recontextualisation des protocoles de performance Fluxus.</p>
+									<p>Sa pratique artistique embrasse à la fois la musique contemporaine (Neue Musik) et la musique ancienne (Historical Performance Practice). Il s'est produit sur de grandes scènes internationales, notamment au Festival de Salzbourg, en collaborant avec des ensembles de premier plan tels que Klangforum Wien. Actuellement basé à Paris, Kim relie de manière organique l'investigation académique et la performance scénique critique.</p>
+								</div>
+
+								<!-- 4. 한국어 본문 -->
+								<div id="lang-ko" class="lang-content">
+									<p>바이올리니스트이자 예술적 연구(Artistic Research)학자인 김영서는 음악적 수행과 사회문화적 맥락의 상호작용을 깊이 있게 탐구해 왔다. 오스트리아 비엔나 국립음악예술대학교(mdw) 예술적 연구(Artistic Research) 박사과정에서 플럭서스(Fluxus) 퍼포먼스 구조의 재맥락화를 통한 비언어적 사회비판 연구를 진행 중이다.</p>
+									<p>현대 음악(Neue Musik)의 수행적 방법론과 중세·르네상스·바록에 이르는 역사적 연주 관습(Historical Performance Practice) 모두에 깊은 관심을 두고 있으며, 클랑포룸 빈(Klangforum Wien) 등 세계적인 현대음악 앙상블과의 협업을 통해 잘츠부르크 페스티벌을 비롯한 주요 국제 무대에서 연주자로 활동해 왔다. 현재 프랑스 파리를 기반으로 연주 수행과 학술 연구를 유기적으로 연결하는 독자적인 예술적 영토를 구축하고 있다.</p>
+								</div>
+
 							</section>
 
 					</div>
@@ -59,6 +121,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<!-- 언어 전환 스크립트 -->
+			<script>
+				function changeLang(langCode) {
+					const contents = document.querySelectorAll('.lang-content');
+					contents.forEach(content => content.classList.remove('active'));
+					
+					const buttons = document.querySelectorAll('.lang-btn');
+					buttons.forEach(btn => btn.classList.remove('active'));
+					
+					document.getElementById('lang-' + langCode).classList.add('active');
+					event.currentTarget.classList.add('active');
+				}
+			</script>
 
 	</body>
 </html>
